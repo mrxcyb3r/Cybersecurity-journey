@@ -56,5 +56,4 @@ For information to route correctly across a network, every device requires both 
 - **Command Syntax:** `ping 10.10.10.10`
 - **🗣️ Real-Life Example:** Imagine standing outside a dark house and yelling, *"Hey, is anyone in there?"* If the house is active and friendly, someone yells back, *"Yes, I'm here!"* You can also count how many seconds it took for their voice to travel back to you to see how far away they are. 
 - **Security Context:** If you ping a target server and it answers, you know it is powered on and online. If it doesn't answer, it's either turned off, the IP address is wrong, or they have a firewall blocking your "shout" so they can stay hidden.
-
 ---
