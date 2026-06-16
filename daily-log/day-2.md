@@ -57,7 +57,6 @@ Understanding web data transit is crucial for web application hacking and Bug Bo
 - **📦 Real-Life Example:** Imagine placing that same private message inside a **heavy-duty steel lockbox** before shipping it. Observers can see the box's destination label, but only the intended recipient possesses the private cryptographic key required to unlock the box and read the contents.
 
 ---
-
 ## ⚡ Day 2 Reference: Core Ports to Memorize
 
 These well-known ports appear constantly during asset discovery and network analysis:
