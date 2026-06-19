@@ -17,7 +17,8 @@ Welcome! This repository serves as my digital notebook, lab journal, and central
 ## 🗂️ Repository Directory
 *(Note: Links will activate as individual documentation folders are created dynamically)*
 
-*   **[🟢 Daily Log](./daily-log)** – Daily learning summaries, tracking challenges, and micro-wins.
+*   **[🟢 Daily Log for cybersecurity](./daily-log)** – Daily learning summaries, tracking challenges, and micro-wins.
+*   **[🟢 Daily Log for python](./python-daily)** – Daily learning summaries, tracking challenges, and micro-wins.
 *   **[🛠️ Tools](./02-Tools/)** – Command syntax, custom flags, and cheatsheets (Nmap, Burp Suite, etc.).
 *   **[💀 Exploits & Labs](./03-Exploits-Labs/)** – Hands-on walkthroughs, CTF notes (TryHackMe), and vulnerability deep-dives.
 *   **[🌐 Fundamentals](./04-Fundamentals/)** – Core notes on Networking, Linux internals, and Active Directory.
