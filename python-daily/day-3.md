@@ -394,4 +394,4 @@ Useful for quickly filtering:
 
 ## 🔥 Day 3 Complete
 
-Today strengthened my understanding of Python data structures and core methods by solving practical cybersecurity-focused exercises involving ports, logs, IP addresses, and vulnerability data.
+Today strengthened my understanding of Python data structures and core methods by solving practical cybersecurity-focused exercises involving ports, logs, IP addresses, and vulnerability data
