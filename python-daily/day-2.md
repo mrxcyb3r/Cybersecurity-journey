@@ -1,4 +1,4 @@
-# 🐍 Python for Cybersecurity - Day 2
+# 🐍 Python for Cybersecurity - Day 2 
 
 ## 📖 Overview
 
@@ -401,4 +401,4 @@ These skills provide a strong foundation for future cybersecurity projects invol
 * Penetration Testing Scripts
 * Network Monitoring
 
-Understanding these concepts is a critical step toward using Python effectively in cybersecurity.
+Understanding these concepts is a critical step toward using Python effectively in cybersecurity
