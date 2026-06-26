@@ -284,7 +284,123 @@ Topics:
 
 ---
 
+# 💻 Full Source Code
+
+```python
+import random
+import string
+
+
+def get_yes_no(prompt):
+    while True:
+        answer = input(prompt).strip().lower()
+
+        if answer in ['y', 'n', 'yes', 'no']:
+            return answer in ['y', 'yes']
+        else:
+            print("❌ Invalid input! Please enter 'y' or 'n' only.")
+
+
+def generate_password():
+    print("🔐 Welcome to Advanced Password Generator\n")
+
+    while True:
+        try:
+            length = int(input("Enter password length (minimum 8): "))
+
+            if length >= 8:
+                break
+
+            print("❌ Password length must be at least 8 characters!")
+
+        except ValueError:
+            print("❌ Please enter a valid number!")
+
+    use_upper = get_yes_no("Include Uppercase Letters? (y/n): ")
+    use_digits = get_yes_no("Include Numbers? (y/n): ")
+    use_special = get_yes_no("Include Special Characters? (y/n): ")
+
+    lowercase = string.ascii_lowercase
+    uppercase = string.ascii_uppercase
+    digits = string.digits
+    special = string.punctuation
+
+    characters = lowercase
+
+    if use_upper:
+        characters += uppercase
+
+    if use_digits:
+        characters += digits
+
+    if use_special:
+        characters += special
+
+    password = []
+
+    # Ensure at least one character from each selected category
+    if use_upper:
+        password.append(random.choice(uppercase))
+
+    if use_digits:
+        password.append(random.choice(digits))
+
+    if use_special:
+        password.append(random.choice(special))
+
+    # Fill remaining length
+    remaining_length = length - len(password)
+
+    password.extend(
+        random.choice(characters)
+        for _ in range(remaining_length)
+    )
+
+    # Shuffle password for better randomness
+    random.shuffle(password)
+
+    final_password = "".join(password)
+
+    # Password Strength Scoring
+    score = 0
+
+    if use_upper:
+        score += 1
+
+    if use_digits:
+        score += 1
+
+    if use_special:
+        score += 1
+
+    if len(final_password) >= 12:
+        score += 1
+
+    if score == 4:
+        password_strength = "Strong"
+    elif score == 3:
+        password_strength = "Good"
+    elif score == 2:
+        password_strength = "Medium"
+    else:
+        password_strength = "High Risk"
+
+    print("\n" + "=" * 60)
+    print(f"✅ Generated Password : {final_password}")
+    print(f"📏 Length             : {length}")
+    print(f"🛡️ Strength           : {password_strength}")
+    print("=" * 60)
+
+    return final_password
+
+
+generate_password()
+```
+
+
 <div align="center">
+
+
 
 ## 🎯 Daily Reflection
 
