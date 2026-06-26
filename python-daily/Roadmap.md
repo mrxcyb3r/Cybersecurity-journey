@@ -30,16 +30,16 @@ The goal is to bridge the gap between core programming syntax and practical secu
 ---
 
 ## 🚀 Journey Dashboard
-
 <div align="center">
 
-### Progress
+🎉 Milestone Achieved
+✅ Day 5 Successfully Completed
 
-```text
-████████░░░░░░░░░░░░░░░░░░░░ 13% Completed
-```
+Progress: █████░░░░░ 5 / 30 Days
 
-**Current Status:** Day 4 / 30
+Every day brings me one step closer to becoming a Cybersecurity Professional.
+
+⭐ Thanks for checking out my learning journey!
 
 </div>
 
