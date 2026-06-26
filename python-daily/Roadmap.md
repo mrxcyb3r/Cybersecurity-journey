@@ -36,10 +36,10 @@ The goal is to bridge the gap between core programming syntax and practical secu
 ### Progress
 
 ```text
-██████░░░░░░░░░░░░░░░░░░░░░░ 10% Completed
+████████░░░░░░░░░░░░░░░░░░░░ 13% Completed
 ```
 
-**Current Status:** Day 3 / 30
+**Current Status:** Day 4 / 30
 
 </div>
 
@@ -241,54 +241,54 @@ Every topic follows the same process:
 
 ---
 
-<details>
-<summary><strong>⚙️ Day 4–5: Functions & Modules ⏳</strong></summary>
+<details open>
+<summary><strong>⚙️ Day 4: Functions & Modules ✅</strong></summary>
 
-### Topics
+### Topics Learned
 
 #### Functions
-
-- Function Definitions
+- Function definitions
 - Parameters
-- Return Values
-- Default Arguments
-- Variable Scope
-- `*args`
-- `**kwargs`
+- Return values
+- Helper functions
+- Code organization
+- Reusable programming
 
 #### Modules
-
 - `random`
-- `datetime`
-- `json`
-- `collections`
-- `os`
-- `sys`
+- `string`
+- Importing modules
+- Character sets
+- Random password generation
 
-### Practice
+### Project
 
-- Reusable Security Functions
-- Random Password Generator
-- Date-Based Logging Utilities
-
-### Mini Project
-
-🔐 Advanced Password Generator
+🔐 Advanced Interactive Password Generator
 
 #### Features
 
-- Custom Length
-- Uppercase Letters
+- Custom password length
+- Uppercase letters
 - Numbers
 - Symbols
-- Password Strength Checker
+- Input validation
+- Password strength checker
+- Random character shuffling
 
-### Goal
+### Skills Practiced
 
-Write reusable and modular Python code.
+- Functions
+- Modules
+- Input validation
+- Error handling
+- Random password generation
+- Security-focused programming
+
+### Status
+
+✅ Completed
 
 </details>
-
 ---
 
 <details>
@@ -586,7 +586,7 @@ By Day 30, this portfolio will demonstrate:
 
 ### 🚀 Current Focus
 
-**Day 4 — Functions & Modules**
+**Day 5 — File Handling & Log Analysis**
 
 *"Small progress every day beats perfection someday."*
 
