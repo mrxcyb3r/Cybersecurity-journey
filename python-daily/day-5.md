@@ -212,7 +212,6 @@ By the end of Day 5, I can:
 * JSON
 * Exception Handling
 * `collections.Counter`
-
 ---
 
 # 💡 Reflection
