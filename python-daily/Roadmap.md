@@ -44,14 +44,13 @@ Current Focus: **Day 7 — Object-Oriented Programming**
 
 <div align="center">
 
-| Stage   | Topics                             | Status      |
-| ------- | ---------------------------------- | ----------- |
-| Stage 1 | Python Fundamentals                | ✅ Completed |
-| Stage 2 | Functions, Modules & File Handling | ✅ Completed |
-| Stage 3 | Object-Oriented Programming        | 🔥 Current  |
-| Stage 4 | Advanced Python                    | ⏳ Upcoming  |
-| Stage 5 | Databases & APIs                   | ⏳ Upcoming  |
-| Stage 6 | Final Projects                     | ⏳ Upcoming  |
+| Stage   | Topics                             | Status         |
+| Stage 1 | Python Fundamentals                | ✅ Completed   |
+| Stage 2 | Functions, Modules & File Handling | ✅ Completed   |
+| Stage 3 | Object-Oriented Programming        | 🔥 In progress |
+| Stage 4 | Advanced Python                    | ⏳ Upcoming    |
+| Stage 5 | Databases & APIs                   | ⏳ Upcoming    |
+| Stage 6 | Final Projects                     | ⏳ Upcoming    |
 
 </div>
 
