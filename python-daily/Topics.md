@@ -46,8 +46,8 @@
 
 ---
 
-**Last Updated:** June 28, 2026  
-**Total Days:** 10 Cybersecurity + 5 Python
+**Last Updated:** June 30, 2026  
+**Total Days:** 10 Cybersecurity + 7 Python
 
 ---
 
