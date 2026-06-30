@@ -11,11 +11,9 @@ The goal is to build a strong foundation in Python programming through daily lea
 
 <div align="center">
 🎉 Milestone Achieved
-✅ Day 6 Successfully Completed
+✅ Day 7 Successfully Completed
 
-Progress: ██████░░░░ 6 / 30 Days
-
-Current Focus: **Day 7 — Object-Oriented Programming**
+**Progress:** ███████░░░ 7 / 30 Days
 
 ⭐ Thanks for checking out my learning journey!
 
@@ -67,7 +65,7 @@ Current Focus: **Day 7 — Object-Oriented Programming**
 | 5   | File Handling • Exception Handling • JSON  | ✅      |
 | 6   | Classes & Objects                          | ✅      |
 | 7   | Inheritance • Encapsulation • Polymorphism | ✅      |
-| 8   | Abstraction • Magic Methods • OOP Practice | ⏳      |
+| 8   | Abstraction • Magic Methods • OOP Practice | ✅      |
 | 9   | Collections Module                         | ⏳      |
 | 10  | Iterators & Generators                     | ⏳      |
 | 11  | Decorators                                 | ⏳      |
@@ -130,7 +128,7 @@ By Day 30, this repository will demonstrate:
 
 ### 🚀 Current Focus
 
-**Day 7 — Object-Oriented Programming)**
+**Day 8 — ()**
 
 *"Consistency beats intensity. One day at a time."*
 
