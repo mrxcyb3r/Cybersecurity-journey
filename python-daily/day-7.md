@@ -2,13 +2,13 @@
 
 # 🐍 Python for Cybersecurity Journey
 
-## 📅 Day 7: Dunder (Magic) Methods & OOP Wrap-Up
+## 📅 Day 7: Dunder Methods & OOP Project Practice
 
 **📆 Date:** June 30, 2026
-**🎯 Focus:** Magic Methods, Operator Overloading & Mapping OOP to Real Pentest Tools
+**🎯 Focus:** Magic Methods and Applying OOP to a Real Project
 **✅ Status:** Completed
 
-*"Wrapping up core OOP — and figuring out which parts actually matter for building security tools."*
+*"From OOP theory to building my first real object-oriented project."*
 
 </div>
 
@@ -16,133 +16,125 @@
 
 # 📖 Overview
 
-Today I completed the core Python OOP toolkit by learning **dunder (magic) methods** — the special double-underscore methods Python calls automatically, like `__str__`, `__eq__`, `__add__`, and `__lt__`. I also took stock of everything learned across Day 6–7 and mapped each OOP concept to how it's actually used in real-world pentesting/exploit-writing tools, so I know what to prioritize going forward.
+Today wrapped up the core OOP curriculum with **dunder (magic) methods**, then immediately put everything to work by building the beginning of a real **Password Manager** project.
 
-This marks the completion of **Day 7** of my Python for Cybersecurity journey.
+Instead of continuing with isolated OOP exercises, I started applying everything I've learned over the past two days to a practical project. This marks the completion of **Day 7** of my Python for Cybersecurity journey.
 
 ---
 
 # 📚 What I Learned
 
-## ✨ Dunder / Magic Methods
+## ✨ Part 1 — Dunder / Magic Methods
 
-"Dunder" = **D**ouble **UNDER**score. These are special methods Python calls **automatically** in certain situations — similar to `toString()` in JS, but Python takes it further with full operator overloading.
+"Dunder" = **D**ouble **UNDER**score. Special methods Python calls automatically in certain situations.
 
 ### JS Comparison
 
 ```javascript
-// JavaScript — only has toString()
 class Money {
-    constructor(amount) { this.amount = amount; }
-    toString() { return `$${this.amount}`; }
+    constructor(amount) {
+        this.amount = amount;
+    }
+
+    toString() {
+        return `$${this.amount}`;
+    }
 }
-console.log(`${new Money(50)}`);  // "$50"
-```
+
+console.log(`${new Money(50)}`);
+````
 
 ```python
-# Python — has a whole family of these
 class Money:
     def __init__(self, amount):
         self.amount = amount
 
-    def __str__(self):              # toString() equivalent
+    def __str__(self):
         return f"${self.amount}"
 
-print(Money(50))   # $50
+print(Money(50))
 ```
 
-### The Most Useful Dunders
+### Most Useful Dunders
 
-| Dunder | Triggered by | JS Equivalent |
-|---|---|---|
-| `__init__` | `MyClass()` | `constructor()` |
-| `__str__` | `print(obj)`, `str(obj)` | `toString()` |
-| `__repr__` | typing `obj` in console / debugging | object inspect in devtools |
-| `__len__` | `len(obj)` | `.length` getter |
-| `__eq__` | `obj1 == obj2` | not natively overridable in JS |
-| `__add__` | `obj1 + obj2` | not possible in JS at all |
-| `__lt__` | `obj1 < obj2` | not possible in JS at all |
+| Dunder     | Triggered by | JS Equivalent     |
+| ---------- | ------------ | ----------------- |
+| `__init__` | `MyClass()`  | `constructor()`   |
+| `__str__`  | `print(obj)` | `toString()`      |
+| `__repr__` | debugging    | object inspection |
+| `__len__`  | `len(obj)`   | `.length`         |
+| `__eq__`   | `==`         | not overridable   |
+| `__add__`  | `+`          | not possible      |
+| `__lt__`   | `<`          | not possible      |
 
-> **Key insight:** JS lets you customize `toString()`, but Python lets you redefine almost every operator (`+`, `-`, `==`, `<`, `len()`...) for your own classes. This is called **operator overloading** and has no real JS equivalent.
-
-### Without `__str__` (the default is ugly)
+### Critical Lesson — Never Mutate State Inside `__str__`
 
 ```python
-m = Money(50)
-print(m)   # <__main__.Money object at 0x7f8a3c1b2d90>  ← useless!
+# ❌ Wrong
+def __str__(self):
+    self._password = "*" * len(self._password)
+    return self._password
+
+# ✅ Correct
+def __str__(self):
+    masked = "*" * len(self._password)
+    return masked
 ```
 
-### Key Gotcha — Name Mangling + `other`
+Using a local variable keeps the original password intact.
 
-When an attribute is double-underscore private (`self.__amount`), Python internally renames it to `self._ClassName__amount`. This means **every dunder method that compares against `other` must use the same private name**, since `other` is just another instance of the *same* class, not an outsider:
+### Name Mangling
+
+Python internally renames double-underscore attributes:
 
 ```python
 def __eq__(self, other):
-    return self.__amount == other.__amount   # ✅ both mangled the same way
-    # return self.__amount == other.amount   # ❌ AttributeError — other has no .amount
+    return self.__amount == other.__amount
 ```
 
-### Key Rules
-- `__add__`, `__lt__`, `__eq__` all take `other` as the right-hand side of the operator
-- `__add__` must `return` a **new object** of the same class — not a raw number
-- `print(obj)` only shows something useful if `__str__` is defined
+This allows proper comparisons between instances while preserving encapsulation.
 
 ---
 
-## 🗺️ OOP Concept Map → Pentest/Exploit Tool Relevance
+## 🛠️ Part 2 — Applied OOP: Password Manager
 
-Since the goal is writing pentest tools and exploits, I mapped each OOP concept I've learned to how often it actually shows up in real security code (e.g. tools like Impacket, Scapy, pwntools):
+Started building a real multi-class project to practice object-oriented programming.
 
-| Concept | Used in pentest tools? | Why |
-|---|---|---|
-| Classes & `__init__` | ✅ Constantly | Every exploit, scanner, or payload is modeled as a class |
-| Inheritance | ✅ Constantly | `class SMBExploit(BaseExploit):`, plugin-style scanner architectures |
-| Encapsulation | ✅ Often | Hiding connection state, sockets, credentials |
-| Static methods | ✅ Often | Utility helpers — hashing, encoding, payload building |
-| Dunder methods | 🟡 Sometimes | `__str__` for clean report output, `__repr__` for debugging packets |
-| Abstract classes | 🟡 Sometimes | Framework-style tools — a base `Module` class all exploits must implement (Metasploit-style pattern) |
-| Multiple inheritance | 🔴 Rarely | Mostly a library-author concern, rarely needed in tool scripts |
-
-**Takeaway:** the 6 core concepts from Day 6–7 cover ~90% of what's needed to start writing real pentest tools. Abstract classes are worth learning later, specifically when building a plugin-based scanning framework.
-
----
-
-# 🛠️ Practice Completed
-
-## 💰 `Money` Class — Dunder Methods Practice
+### `PasswordEntry`
 
 ```python
-class Money:
-    def __init__(self, amount):
-        self.__amount = amount
+class PasswordEntry:
+    def __init__(self, site, username, password):
+        self.site = site
+        self.username = username
+        self._password = password
 
     def __str__(self):
-        return f"${self.__amount}"
+        masked = "*" * len(self._password)
+        return f"🔑 {self.site} | {self.username} | {masked}"
 
-    def __eq__(self, other):
-        return self.__amount == other.__amount
+    def to_dict(self):
+        return {
+            "site": self.site,
+            "username": self.username,
+            "password": self._password,
+        }
 
-    def __add__(self, other):
-        return Money(self.__amount + other.__amount)   # returns a NEW object
-
-    def __lt__(self, other):
-        return self.__amount < other.__amount
-
-
-m1 = Money(50)
-m2 = Money(30)
-m3 = Money(50)
-
-print(m1)         # $50
-print(m1 == m3)   # True
-print(m1 == m2)   # False
-print(m1 + m2)    # $80
-print(m2 < m1)    # True
+    @staticmethod
+    def from_dict(data):
+        return PasswordEntry(
+            data["site"],
+            data["username"],
+            data["password"],
+        )
 ```
 
-**Bugs I fixed during review:**
-1. Used `other.amount` instead of `other.__amount` — caused `AttributeError` due to name mangling
-2. `__add__` originally returned a raw number instead of a new `Money` object — broke `__str__` formatting on the result
+### Next Features
+
+* PasswordVault class
+* JSON save/load
+* Password generator
+* Password strength checker
 
 ---
 
@@ -150,33 +142,41 @@ print(m2 < m1)    # True
 
 By the end of Day 7, I can:
 
-- ✅ Define `__str__` for clean, readable object printing
-- ✅ Define `__eq__` to control what `==` means for custom objects
-- ✅ Define `__add__` to support `+` between custom objects (operator overloading)
-- ✅ Define `__lt__` to support `<` comparisons (useful for sorting)
-- ✅ Understand Python's name-mangling behavior with `__private` attributes
-- ✅ Map OOP concepts to their real-world usage in pentest/exploit tooling
-- ✅ Identify which OOP topics are essential now vs. learn-when-needed later
+* ✅ Understand and implement Python dunder methods
+* ✅ Use `__str__` for readable object output
+* ✅ Overload operators with `__eq__`, `__add__`, and `__lt__`
+* ✅ Understand Python name mangling
+* ✅ Avoid modifying object state inside display methods
+* ✅ Use `@staticmethod`
+* ✅ Build JSON-ready classes using `to_dict()` and `from_dict()`
+* ✅ Apply OOP concepts to a practical Password Manager project
+* ✅ Organize code using multiple classes and reusable methods
 
 ---
 
 # 📂 Technologies Used
 
-- Python 3
-- Dunder / Magic Methods
-- Operator Overloading
-- Name Mangling (`__private` attributes)
+* Python 3
+* Object-Oriented Programming (OOP)
+* Dunder / Magic Methods
+* Operator Overloading
+* Name Mangling
+* Static Methods
+* JSON-ready Data Modeling
 
 ---
 
 # 💡 Reflection
 
-> "Dunder methods were the most 'Python-specific' concept so far — JS has nothing like full operator overloading. The trickiest part wasn't the syntax, it was realizing that `other` in a dunder method is just another instance of my own class, so private attributes need consistent naming on both sides. Today also helped me zoom out: I now know I have enough OOP to start writing real tools, and the remaining advanced topics (abstract classes, multiple inheritance) can wait until a real project actually demands them."
+> "Today marked the transition from learning object-oriented programming concepts to applying them in a real project. Building the Password Manager helped reinforce classes, encapsulation, static methods, and magic methods while exposing a subtle bug involving `__str__`. Fixing that bug reminded me that display methods should never modify object state. OOP now feels much more natural because I'm using it to build something practical instead of solving isolated exercises."
 
 ---
 
 <div align="center">
 
-*Day 7 / Python for Cybersecurity — Core OOP Complete, Moving Toward Tool-Building* 🐍
+**Day 7 Complete ✅**
+
+*Python for Cybersecurity — Dunder Methods & Applied OOP* 🐍
 
 </div>
+
