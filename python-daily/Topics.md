@@ -41,13 +41,14 @@
 | 5 | File Handling, Exception Handling & JSON (Log Analyzer) | [day-5.md](./python-daily/day-5.md) |
 | 6 | Object-Oriented Programming (Classes, Inheritance, Encapsulation & Static Methods) | [day-6.md](./python-daily/day-6.md) |
 | 7 | Dunder Methods, Operator Overloading & Applied OOP (Password Manager) | [day-7.md](./python-daily/day-7.md) |
+| 8 | Network Sockets, TCP Connections & Tool Automation (Simple Port Scanner) | [day-8.md](./python-daily/day-8.md) |
 
 *(More Python days will be added here)*
 
 ---
 
-**Last Updated:** June 30, 2026  
-**Total Days:** 10 Cybersecurity + 7 Python
+**Last Updated:** July 1, 2026  
+**Total Days:** 10 Cybersecurity + 8 Python
 
 ---
 
