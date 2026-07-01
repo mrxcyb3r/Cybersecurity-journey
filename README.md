@@ -127,7 +127,7 @@ This repository serves as my public learning journal. I document everything I st
 ```Plaintext
 
 📦 Building-a-Career-in-Cybersecurity
-├── 📁 cybersecurity-daily/   # Daily security learning logs & insights
+├── 📁 daily-log/             # Daily security learning logs & insights
 ├── 📁 python-daily/          # Daily Python scripts & snippets
 ├── 📁 networking/            # Network labs, packet captures & notes
 ├── 📁 linux/                 # System administration & command deep-dives
