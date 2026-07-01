@@ -1,4 +1,4 @@
-# Python Study Journal 🚀
+🐍 Python for Cybersecurity Journey
 
 ## Day 1 - Python Basics
 
