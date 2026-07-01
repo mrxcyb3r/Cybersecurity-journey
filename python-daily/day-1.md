@@ -4,7 +4,7 @@
 
 **Date:** June 19, 2026
 
-Today I started learning Python fundamentals. I covered the core building blocks that are essential for programming and will be useful for cybersecurity, automation, and scripting.
+Today I started learning Python fundamentals. I covered the core building blocks that are essential for programming and will be useful for cybersecurity, automation, and scripting
 
 ---
 
