@@ -6,8 +6,6 @@ The focus here is moving from abstract networking theory to active system analys
 
 ---
 
-## 🔍 Active Tool Index
-
 <details>
 <summary><b>📦 Nmap (Network Mapper)</b></summary>
 
@@ -95,3 +93,20 @@ nmap -sV -sC --script vuln -T4 192.168.1.100 -oN vuln_scan.txt
 **Status**: Solid foundational and pentester-level proficiency with Nmap.
 
 </details>
+
+
+
+
+<details>
+<summary><b>📦 Wireshark</b></summary>
+
+### 🛠️ Core Overview
+Learned via excellent tutorial: **[Wireshark Tutorial for Beginners (Step-by-Step Guide)](https://www.youtube.com/watch?v=NdTu3bDTBbo)**
+
+**Wireshark** is a free, passive network packet sniffer that intercepts and records live digital traffic traveling over your network interface. It organizes raw data—from MAC addresses to HTTP headers—into a human-readable format. Pentesters use it to analyze protocols, inspect web requests, and verify how tools like Nmap behave on the wire.
+
+
+
+
+
+
