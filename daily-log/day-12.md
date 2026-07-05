@@ -399,11 +399,157 @@ By the end of Day 12, I can:
 
 ---
 
+
 # 🛡️ Why This Matters for Cybersecurity
 
 Linux is the foundation of penetration testing, digital forensics, cloud infrastructure, and system administration. Every security professional must know how to efficiently navigate the filesystem, manage files, and work entirely from the command line. These skills are essential for tasks such as log analysis, evidence collection, automation, reconnaissance, and privilege escalation.
 
 ---
+
+# ✏️ Editing Files with Nano
+
+One of the most common tasks in Linux is editing text files. While advanced editors like **Vim** and **Vi** are widely used by experienced administrators and penetration testers, **Nano** is beginner-friendly and provides a simple interface for creating and editing files directly from the terminal.
+
+Using terminal-based text editors is an essential Linux skill because many remote systems do not have a graphical interface.
+
+---
+
+## 📝 Creating and Editing Files
+
+Create or open a file with Nano:
+
+```bash
+nano notes.txt
+```
+
+This command opens the Nano editor and creates `notes.txt` if it does not already exist.
+
+---
+
+## 🔍 Searching Inside a File
+
+Nano includes a built-in search feature.
+
+Press:
+
+```text
+Ctrl + W
+```
+
+Enter the word you want to search for and press **Enter**.
+
+Press **Ctrl + W** followed by **Enter** again to jump to the next matching result.
+
+---
+
+## 💾 Saving a File
+
+Save your changes by pressing:
+
+```text
+Ctrl + O
+```
+
+Then press **Enter** to confirm the filename.
+
+---
+
+## 🚪 Exiting Nano
+
+Leave the editor by pressing:
+
+```text
+Ctrl + X
+```
+
+---
+
+## 📖 Displaying File Contents
+
+View the contents of a file directly from the terminal using:
+
+```bash
+cat notes.txt
+```
+
+Example output:
+
+```text
+Here we can type everything we want and make our notes.
+```
+
+---
+
+# 🔐 Important System Files
+
+One of the most important files in Linux is:
+
+```text
+/etc/passwd
+```
+
+This file stores information about user accounts, including:
+
+* Username
+* User ID (UID)
+* Group ID (GID)
+* Home directory
+* Default login shell
+
+Historically, password hashes were also stored in this file, but modern Linux systems store them in:
+
+```text
+/etc/shadow
+```
+
+which has much stricter permissions.
+
+---
+
+# 🛡️ Why This Matters for Cybersecurity
+
+Understanding Linux configuration files is an important skill for penetration testers.
+
+During security assessments, these files may reveal:
+
+* User accounts
+* Misconfigured permissions
+* Weak security settings
+* Privilege escalation opportunities
+* Sensitive system information
+
+Identifying improperly protected files is a key part of Linux enumeration during penetration testing.
+
+---
+
+# 🎯 Additional Commands Learned
+
+```bash
+nano notes.txt
+
+cat notes.txt
+```
+
+### Nano Shortcuts
+
+| Shortcut   | Action                     |
+| ---------- | -------------------------- |
+| `Ctrl + O` | Save file                  |
+| `Ctrl + X` | Exit Nano                  |
+| `Ctrl + W` | Search inside file         |
+| `Enter`    | Confirm filename or search |
+
+---
+
+### 🧠 Key Takeaways
+
+* ✅ Create and edit files using Nano
+* ✅ Search text inside files
+* ✅ Save and exit Nano efficiently
+* ✅ Display file contents with `cat`
+* ✅ Understand the purpose of `/etc/passwd`
+* ✅ Learn why proper file permissions are critical in cybersecurity
+
 
 # 💭 Reflection
 
