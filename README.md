@@ -141,7 +141,7 @@ If you want to follow my progress, collaborate on labs, or share resources, feel
 * **GitHub:** [mrxcyb3r](https://github.com/mrxcyb3r)
 * **X (Twitter):** [@mrx__404](https://x.com/mrx__404)
 * **Bio Link:** [guns.lol/mrx404](https://guns.lol/mrx404)
-* **Discord:** [mrx__404 (mrx404notfound)](https://discordapp.com/users/mrx__404)
+* **Discord:** [mrx__404](https://discordapp.com/users/mrx__404)
 
 🚀 "Small progress every day becomes extraordinary progress over time."
 
