@@ -1,61 +1,64 @@
-# 🐧 Day 12 — Linux Navigation & Filesystem Fundamentals
+# 🐧 Day 12 — Linux fundamentals
 
-> *Mastering Linux navigation is one of the first steps toward becoming an efficient penetration tester. Today I learned how to navigate the Linux filesystem, inspect files and directories, understand the Linux hierarchy, and use essential shell shortcuts to work faster from the command line.*
+> *Today's focus was mastering Linux navigation, understanding the Linux filesystem hierarchy, and learning how to create, organize, move, copy, and manage files directly from the command line. These are essential skills for every cybersecurity professional and penetration tester.*
 
 ---
 
-## 📅 Date
+<div align="center">
 
-**Day 12** of my Cybersecurity Journey
+## 📅 Day 12
+
+**Module:** Linux Fundamentals (Hack The Box)
 
 **Status:** ✅ Completed
+
+</div>
 
 ---
 
 # 🎯 Objectives
 
-* Understand the Linux philosophy and architecture
+* Understand Linux architecture and philosophy
 * Learn the Linux File System Hierarchy (FHS)
-* Navigate directories efficiently
+* Navigate the filesystem efficiently
 * Inspect files and directories
-* Master essential Linux navigation commands
-* Improve command-line productivity using shell shortcuts
+* Create and organize files and folders
+* Move, rename, and copy files
+* Improve productivity with shell shortcuts
 
 ---
 
-# 📚 Topics Covered
+# 🐧 Linux Structure & Philosophy
 
-## 🐧 Linux Structure & Architecture
-
-Linux is designed around a simple philosophy:
+Linux follows a simple yet powerful philosophy:
 
 * Build small tools that perform one task well
-* Combine commands together to solve complex problems
-* Everything is treated as a file
+* Combine commands together to accomplish complex tasks
+* Everything in Linux is treated as a file
 * Configuration files are stored as plain text
-* The command line provides complete control over the operating system
+* The terminal provides complete control over the operating system
 
 ### Linux Architecture
 
-```
+```text
 Hardware
-     │
-     ▼
+   │
+   ▼
 Kernel
-     │
-     ▼
+   │
+   ▼
 Shell
-     │
-     ▼
-System Utilities & Applications
+   │
+   ▼
+System Utilities
 ```
 
 ### Components
 
-* **Hardware** — CPU, RAM, Storage Devices
-* **Kernel** — Manages hardware resources and running processes
-* **Shell** — Command interpreter between the user and the kernel
-* **Utilities** — Programs that provide operating system functionality
+* **Hardware** – CPU, RAM, storage devices
+* **Kernel** – Manages hardware and system resources
+* **Shell** – Interprets user commands
+* **Utilities** – Programs used to interact with the operating system
 
 ---
 
@@ -63,39 +66,39 @@ System Utilities & Applications
 
 I learned the purpose of the most important Linux directories.
 
-| Directory | Purpose                         |
-| --------- | ------------------------------- |
-| `/`       | Root directory                  |
-| `/bin`    | Essential user commands         |
-| `/sbin`   | System administration commands  |
-| `/etc`    | System configuration files      |
-| `/home`   | Home directories for users      |
-| `/root`   | Home directory of the root user |
-| `/dev`    | Device files                    |
-| `/var`    | Variable data such as logs      |
-| `/tmp`    | Temporary files                 |
+| Directory | Purpose                        |
+| --------- | ------------------------------ |
+| `/`       | Root directory                 |
+| `/bin`    | Essential user commands        |
+| `/sbin`   | Administrative system commands |
+| `/etc`    | Configuration files            |
+| `/home`   | User home directories          |
+| `/root`   | Root user's home directory     |
+| `/dev`    | Device files                   |
+| `/var`    | Variable data such as logs     |
+| `/tmp`    | Temporary files                |
 
 ---
 
 # 🧭 Navigation Commands
 
-## Current Working Directory
+## Display Current Directory
 
 ```bash
 pwd
 ```
 
-Displays the current location inside the filesystem.
+Shows the current working directory.
 
 ---
 
-## Listing Directory Contents
+## List Files
 
 ```bash
 ls
 ```
 
-Lists files and folders.
+Displays files and folders.
 
 ### Long Listing
 
@@ -105,11 +108,11 @@ ls -l
 
 Shows:
 
-* File permissions
+* Permissions
 * Owner
 * Group
-* Size
-* Date
+* File size
+* Modification date
 * File name
 
 ---
@@ -120,7 +123,9 @@ Shows:
 ls -la
 ```
 
-Displays hidden files such as:
+Displays hidden files beginning with a dot (`.`).
+
+Examples:
 
 * `.bashrc`
 * `.bash_history`
@@ -134,19 +139,19 @@ Displays hidden files such as:
 ls -l /var
 ```
 
-Lists the contents of another directory without entering it.
+Lists another directory without changing into it.
 
 ---
 
 # 📁 Directory Navigation
 
-Move to another directory:
+Move into another directory:
 
 ```bash
 cd /dev/shm
 ```
 
-Go back to the previous directory:
+Return to the previous directory:
 
 ```bash
 cd -
@@ -160,23 +165,23 @@ cd ..
 
 ---
 
-# ⚡ Shell Productivity
+# ⚡ Productivity Shortcuts
 
 ## Auto Completion
 
 Press:
 
-```
+```text
 TAB
 ```
 
 or
 
-```
+```text
 TAB TAB
 ```
 
-to automatically complete commands or display possible matches.
+to complete commands or display possible matches.
 
 ---
 
@@ -186,7 +191,7 @@ to automatically complete commands or display possible matches.
 cd /dev/shm && clear
 ```
 
-The second command executes only if the first succeeds.
+Runs the second command only if the first succeeds.
 
 ---
 
@@ -196,9 +201,9 @@ The second command executes only if the first succeeds.
 clear
 ```
 
-or simply press:
+or
 
-```
+```text
 Ctrl + L
 ```
 
@@ -206,15 +211,15 @@ Ctrl + L
 
 ## Search Command History
 
-```
+```text
 Ctrl + R
 ```
 
-Quickly search previously executed commands.
+Search previously executed commands instantly.
 
 ---
 
-# 📖 Understanding `ls -l`
+# 📄 Understanding `ls -l`
 
 Example:
 
@@ -227,28 +232,117 @@ Meaning:
 | Field       | Description            |
 | ----------- | ---------------------- |
 | `d`         | Directory              |
-| `rwxr-xr-x` | Permissions            |
-| `2`         | Hard links             |
+| `rwxr-xr-x` | File permissions       |
+| `2`         | Number of hard links   |
 | `user`      | Owner                  |
 | `group`     | Group owner            |
-| `4096`      | Size                   |
+| `4096`      | File size              |
 | `Nov 13`    | Last modified date     |
 | `Desktop`   | File or directory name |
 
 ---
 
-# 🧠 Key Concepts Learned
+# 📂 Working with Files & Directories
 
-* Linux follows a hierarchical filesystem
-* Everything in Linux is treated as a file
-* Hidden files begin with `.`
-* `pwd` shows the current directory
-* `ls` lists directory contents
-* `cd` changes directories
-* `cd -` returns to the previous location
-* `cd ..` moves to the parent directory
-* Shell auto-completion improves productivity
-* Command history makes repetitive tasks faster
+Unlike Windows, Linux allows users to efficiently create, edit, move, and manage files directly from the terminal. This command-line approach is faster, easier to automate, and essential for system administration and cybersecurity tasks.
+
+---
+
+## Creating Files
+
+Create an empty file:
+
+```bash
+touch info.txt
+```
+
+Create a file inside another directory:
+
+```bash
+touch ./Storage/local/user/userinfo.txt
+```
+
+---
+
+## Creating Directories
+
+Create a directory:
+
+```bash
+mkdir Storage
+```
+
+Create nested directories automatically:
+
+```bash
+mkdir -p Storage/local/user/documents
+```
+
+---
+
+## Viewing Directory Structure
+
+Display the directory tree:
+
+```bash
+tree .
+```
+
+Example:
+
+```text
+.
+├── info.txt
+└── Storage
+    └── local
+        └── user
+            └── documents
+```
+
+---
+
+## Renaming Files
+
+Rename a file:
+
+```bash
+mv info.txt information.txt
+```
+
+---
+
+## Moving Files
+
+Move multiple files into another directory:
+
+```bash
+mv information.txt readme.txt Storage/
+```
+
+---
+
+## Copying Files
+
+Copy a file without removing the original:
+
+```bash
+cp Storage/readme.txt Storage/local/
+```
+
+---
+
+# 💡 Important Concepts
+
+During today's lesson I learned that:
+
+* `touch` creates empty files.
+* `mkdir` creates directories.
+* `mkdir -p` creates nested directories automatically.
+* `mv` is used to move **and** rename files.
+* `cp` copies files while keeping the original.
+* `tree` displays the filesystem hierarchy.
+* Relative paths (`.`) refer to the current directory.
+* Linux file management from the terminal is faster and easier to automate than using a graphical interface.
 
 ---
 
@@ -271,50 +365,60 @@ cd ..
 
 cd -
 
+touch
+
+mkdir
+
+mkdir -p
+
+tree
+
+mv
+
+cp
+
 clear
-
-Ctrl + L
-
-Ctrl + R
 ```
 
 ---
 
 # 🎯 Learning Outcomes
 
-By the end of Day 13, I can:
+By the end of Day 12, I can:
 
-* ✅ Understand the Linux architecture
-* ✅ Explain the Linux filesystem hierarchy
+* ✅ Explain the Linux architecture
+* ✅ Understand the Linux filesystem hierarchy
 * ✅ Navigate directories confidently
-* ✅ Inspect files and directories
-* ✅ Read detailed `ls -l` output
-* ✅ Locate hidden files
+* ✅ Inspect files and permissions
+* ✅ Create files and directories
+* ✅ Create nested directory structures
+* ✅ Rename files
+* ✅ Move files between directories
+* ✅ Copy files safely
 * ✅ Use shell shortcuts for faster navigation
-* ✅ Work more efficiently from the Linux command line
 
 ---
 
-# 🚀 Why This Matters for Cybersecurity
+# 🛡️ Why This Matters for Cybersecurity
 
-Linux is the foundation of most servers, cloud infrastructure, penetration testing distributions, and security tools. Efficient navigation and filesystem knowledge are essential skills for reconnaissance, privilege escalation, log analysis, malware investigation, and system administration.
+Linux is the foundation of penetration testing, digital forensics, cloud infrastructure, and system administration. Every security professional must know how to efficiently navigate the filesystem, manage files, and work entirely from the command line. These skills are essential for tasks such as log analysis, evidence collection, automation, reconnaissance, and privilege escalation.
 
 ---
 
 # 💭 Reflection
 
-> *Today I strengthened my Linux fundamentals by learning how to navigate the filesystem efficiently and understand the structure of the operating system. Mastering these core commands is an essential step toward becoming a skilled cybersecurity professional and penetration tester.*
+> *Today I became much more comfortable working in the Linux terminal. I learned how to navigate the filesystem, inspect directories, and manage files using only command-line tools. These fundamental skills are the building blocks for more advanced Linux administration and cybersecurity techniques.*
 
 ---
 
 <div align="center">
 
-## ✅ Day 12 Completed
+# ✅ Day 12 Completed
 
 **Cybersecurity Journey Progress**
 
-**Linux Fundamentals ✔️**
+🐧 Linux Fundamentals • Filesystem • Navigation • File Management
 
-*"The command line isn't just a tool—it's the language of cybersecurity."*
+*"Mastering the Linux terminal is the first step toward mastering cybersecurity."*
 
 </div>
