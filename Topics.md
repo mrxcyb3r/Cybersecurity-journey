@@ -20,7 +20,7 @@
 | 9 | MAC Addresses, ARP, IPv6 & Networking Terminology | [day-9.md](./daily-log/day-9.md) |
 | 10 | Wireless Networks, VPNs, IPsec & Common Protocols | [day-10.md](./daily-log/day-10.md) |
 | **11** | **Nmap - Network Discovery, Port Scanning, Service Enumeration & Pentesting** | [day-11.md](./daily-log/day-11.md) |
-| **12** | **Wireshark - Packet Sniffing, Traffic Analysis & Network Protocol Deep-Dive** | [day-12.md](./daily-log/day-12.md) |
+| **12** | **Linux - Fundamentals** | [day-12.md](./daily-log/day-12.md) |
 ---
 ## 🐍 Python for Cybersecurity Topics
 
@@ -38,7 +38,7 @@
 *(More Python days will be added here)*
 
 ---
-**Last Updated:** July 2, 2026  
+**Last Updated:** July 5, 2026  
 **Total Days:** 12 Cybersecurity + 8 Python
 ---
 > Small progress every day becomes extraordinary progress over time.  
