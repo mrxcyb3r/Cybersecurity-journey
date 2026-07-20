@@ -24,6 +24,8 @@
 ---
 ## 🐍 Python for Cybersecurity Topics
 
+A daily breakdown of practical Python topics tailored for security automation, engineering, and incident response.
+
 | Day | Main Topic | Link |
 |-----|------------|------|
 | 1 | Python Basics (Variables, Strings, Control Flow & Data Structures) | [day-1.md](./python-daily/day-1.md) |
@@ -34,12 +36,13 @@
 | 6 | Object-Oriented Programming (Classes, Inheritance, Encapsulation & Static Methods) | [day-6.md](./python-daily/day-6.md) |
 | 7 | Dunder Methods, Operator Overloading & Applied OOP (Password Manager) | [day-7.md](./python-daily/day-7.md) |
 | 8 | Network Sockets, TCP Connections & Tool Automation (Simple Port Scanner) | [day-8.md](./python-daily/day-8.md) |
+| 9 | The Collections Module (High-Performance Containers & Log Triage Data Structures) | [day-9.md](./python-daily/day-9.md) |
 
 *(More Python days will be added here)*
 
 ---
-**Last Updated:** July 5, 2026  
-**Total Days:** 12 Cybersecurity + 8 Python
+**Last Updated:** July 20, 2026  
+**Total Days:** 12 Cybersecurity + 9 Python
 ---
 > Small progress every day becomes extraordinary progress over time.  
 > **Keep going!** 🛡️
