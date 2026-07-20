@@ -55,7 +55,7 @@ The goal is to build a strong foundation in Python programming through daily lea
 | 7 | Inheritance • Encapsulation • Polymorphism | ✅ |
 | 8 | Network Sockets • TCP Port Scanner Project | ✅ |
 | 9 | Advanced Network Sockets Programming | ⏳ |
-| 10 | Collections Module | ⏳ |
+| 9 | Collections Module | ⏳ |
 | 11 | Iterators & Generators | ⏳ |
 | 12 | Decorators | ⏳ |
 | 13 | Lambda, Map, Filter & Reduce | ⏳ |
