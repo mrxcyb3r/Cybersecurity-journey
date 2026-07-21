@@ -1,5 +1,4 @@
 <div align="center">
-
 # 🛡️ Building a Career in Cybersecurity
 ### *Learning • Building • Breaking • Securing • Documenting*
 
