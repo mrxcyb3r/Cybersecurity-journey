@@ -101,7 +101,7 @@ nmap -sV -sC --script vuln -T4 192.168.1.100 -oN vuln_scan.txt
 <summary><b>📦 Wireshark</b></summary>
 
 ### 🛠️ Core Overview
-Learned via excellent tutorial: **[Wireshark Tutorial for Beginners (Step-by-Step Guide)](https://www.youtube.com/watch?v=NdTu3bDTBbo)**
+Learned via excellent tutorial: 
 
 **Wireshark** is a free, passive network packet sniffer that intercepts and records live digital traffic traveling over your network interface. It organizes raw data—from MAC addresses to HTTP headers—into a human-readable format. Pentesters use it to analyze protocols, inspect web requests, and verify how tools like Nmap behave on the wire.
 
